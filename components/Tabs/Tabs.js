@@ -23,17 +23,16 @@ class TabLink {
      this.cards = Array.from(this.cards).map(card => new TabCard(card));
        
     // Add a click event that invokes this.selectTab
-     this.tabElement.addEventListener('click', () => this.selectTab());
+     this.tabElement.addEventListener('click', () => {this.selectTab()});
   }
 
   selectTab(){
-
     // Select all elements with the .tab class on them
      const tabs = document.querySelectorAll('.tab');
     
     // Iterate through the NodeList removing the .active-tab class from each element
-     tabs.forEach(tabElement => 
-      tabElement.classList.remove('active-tab')); 
+    tabs.forEach( tab => { tab.classList.remove('active-tab');
+})
 
     // Select all of the elements with the .card class on them
      const cards = document.querySelectorAll('.card');
@@ -51,17 +50,16 @@ class TabLink {
 }
 
 class TabCard {
-  constructor(card){
+  constructor(cardElement){
     // Assign this.cardElement to the cardElement DOM reference
-     this.cardElement = card;
+     this.cardElement = cardElement;
   }
   selectCard(){
     // Update the style of this.cardElement to display = "flex"
-     this.cardElement.style.display = 'flex';
+     this.cardElement.style.display = "flex";
   }
-
 }
 
 // Step 1: Finding all items with the '.tab' class and assigning them to the tabs variable, chaining a .forEach onto that to iterate over the DOM NodeList 
 
-let tabs = document.querySelectorAll('.tab').forEach( tab => new TabLink(tab));
+let tabs = document.querySelectorAll('.tab').forEach( tab => new TabLink(tab))
