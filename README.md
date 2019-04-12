@@ -1,6 +1,32 @@
 # Sprint-Challenge Applied Javascript - Lambda Times
 
-This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored the DOM and the concept of components. During this Sprint, you studied the DOM, DOM Events, and Components. In your challenge this week, you will demonstrate proficiency by creating an online Lambda newspaper called "Lambda Times."
+ This Sprint explored the DOM and the concept of components. During this Sprint, you studied the DOM, DOM Events, and Components. In your challenge this week, you will demonstrate proficiency by creating an online Lambda newspaper called "Lambda Times."
+
+## Self-Study Questions
+
+Demonstrate your understanding of this week's concepts by answering the following free-form questions.
+
+Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
+
+1. What is the DOM?
+
+// The DOM (short for Document Object Model) is an API (application programming interface) that acts as a bridge between our HTML/CSS content and the browser. It _represents_ our code, so we can make changes on it without actually changing our content, which is important for web development, testing, and working with JavaScript. 
+
+2. What is an event?
+
+// An event is any of the many kinds of interactions a user might have with a website, like a 'click', 'mouseover', 'dblclick', etc. 
+
+3. What is an event listener?
+
+// An event listener is a higher order function that watches for a particular interaction a user has with a website (event) on a particular element and executes a callback function (an event handler) when that event occurs. 
+
+4. Why would we convert a NodeList into an Array?
+
+// While a NodeList may be array-like, it is not an array, so that means it can't access any array methods (though, foreach() still works on node lists.). We might convert a NodeList into an array in order to access Array methods. 
+
+5. What is a component?
+
+// A component combines HTML, CSS and JavaScript into reusbale bits of code that can allow elements to share functionality and styling. It basically involves a querySelector that calls all the right elements, a foreach() method to return a new smarter Object for each item in the elements, and finally the constructor Class that defines that new smarter Object. 
 
 ## Instructions
 
@@ -23,22 +49,6 @@ You are going to create a Lambda Newspaper. Your job is going to be to add funct
 ![Working Sprint Challenge Gif](./Sprint-Challenge.gif 'Example of working project')
 
 In meeting the minimum viable product (MVP) specifications listed below, you should have a console full of correct responses to the problems given.
-
-## Self-Study Questions
-
-Demonstrate your understanding of this week's concepts by answering the following free-form questions.
-
-Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
-
-1. What is the DOM?
-
-2. What is an event?
-
-3. What is an event listener?
-
-4. Why would we convert a NodeList into an Array?
-
-5. What is a component?
 
 ### Git Set up
 
