@@ -18,10 +18,10 @@ class TabLink {
     }
 
      // Map over the newly converted NodeList we just created in our if statement above. 
-     this.cards = Array.from(this.cards).map(function(cardElement){
-      // Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class. 
-      cardElement = new TabCard(cardElement);
-    }); 
+
+     // Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class.
+     this.cards = Array.from(this.cards).map(cardElement => new TabCard(cardElement));
+       
 
     // Add a click event that invokes this.selectTab
      this.tabElement.addEventListener('click', () => this.selectTab());
@@ -33,18 +33,16 @@ class TabLink {
      const tabs = document.querySelectorAll('.tab');
     
     // Iterate through the NodeList removing the .active-tab class from each element
-     tabs.forEach(function(tabElement){
-      tabElement.classList.remove(`active-tab`); 
-    });
+     tabs.forEach(tabElement => 
+      tabElement.classList.remove(`active-tab`)); 
 
     // Select all of the elements with the .card class on them
      const cards = document.querySelectorAll('.card');
 
     // Iterate through the NodeList setting the display style each one to 'none'
-     cards.forEach(function(cardElement){
-      cardElement.style.display = 'none'; 
-    });
-
+     cards.forEach(cardElement => 
+      cardElement.style.display = 'none'); 
+     
     // Add a class of ".active-tab" to this.tabElement
     this.tabElement.classList.add('active-tab');
   
@@ -67,8 +65,4 @@ class TabCard {
 
 // Step 1: Finding all items with the '.tab' class and assigning them to the tabs variable, chaining a .forEach onto that to iterate over the DOM NodeList 
 
-let tabs = document.querySelectorAll('.tab').forEach(function(tabElement){
-
-  // Return (implicit) a new instance of TabLink, passing in each tab as a param
-  new TabLink(tabElement);  
-});
+let tabs = document.querySelectorAll('.tab').forEach( tab => new TabLink(tab));
